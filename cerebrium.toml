@@ -1,0 +1,20 @@
+[cerebrium.deployment]
+# existing values...
+docker_base_image_url = "registry.cerebrium.ai/daily:latest"
+name = "new-project"
+
+[cerebrium.hardware]
+region = "us-east-1"
+provider = "aws"
+compute = "AMPERE_A10"
+cpu = 4
+memory = 18.0
+gpu_count = 1
+
+[cerebrium.dependencies.pip]
+torch = ">=2.0.0"
+"pipecat-ai[silero, daily, openai, deepgram]" = "latest"
+aiohttp = "latest"
+torchaudio = "latest"
+vllm = "latest"
+huggingface_hub = "latest"
